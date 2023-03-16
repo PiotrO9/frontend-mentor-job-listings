@@ -1,4 +1,5 @@
-@import url("https://fonts.google.com/specimen/League+Spartan");
+@import "./assets/Styles/variables.scss";
+
 #root {
   margin: 0 auto;
   text-align: center;
@@ -11,7 +12,7 @@
 html, body, #root, .App {
   width: 100%;
   height: 100%;
-  background-color: hsl(180, 52%, 96%);
+  background-color: $LightGrayishCyanBackground;
 }
 
 header {
@@ -21,7 +22,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("./assets//images/bg-header-desktop.svg");
-  background-color: hsl(180, 29%, 50%);
+  background-color: $DesaturatedDarkCyan;
 }
 
 main {
@@ -30,15 +31,18 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
+
+  .Filters {
+    width: 80%;
+    height: 120px;
+    border-radius: 15px;
+    position: relative;
+    top: -50px;
+    background-color: white;
+  }
+
+  .Listings {
+    width: 80%;
+    
+  }
 }
-main .Filters {
-  width: 80%;
-  height: 120px;
-  border-radius: 15px;
-  position: relative;
-  top: -50px;
-  background-color: white;
-}
-main .Listings {
-  width: 80%;
-}/*# sourceMappingURL=App.css.map */
