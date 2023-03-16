@@ -16,6 +16,9 @@
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
+.JobOffer:hover .TitleText {
+  color: hsl(180, 29%, 50%);
+}
 .JobOffer__image {
   width: 15%;
   display: flex;
@@ -29,7 +32,7 @@
 }
 .JobOffer__datas {
   display: flex;
-  width: 26%;
+  width: 40%;
   flex-direction: column;
   justify-content: center;
   font-family: "Gill Sans";
@@ -68,14 +71,18 @@
   text-align: start;
 }
 .JobOffer__datas--details {
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  gap: 7px;
   align-items: center;
   color: hsl(180, 8%, 52%);
 }
 .JobOffer__datas--details p {
+  width: 40%;
   text-align: start;
   margin-bottom: 5px;
+}
+.JobOffer__datas--details p:nth-of-type(1) {
+  width: 30%;
 }/*# sourceMappingURL=JobOffer.css.map */

@@ -24,7 +24,7 @@ function JobOffer({JobDatas}) {
                     }
                 </div>
                 <div className="JobOffer__datas--title">
-                    <p>{JobDatas.position}</p>
+                    <p className='TitleText'>{JobDatas.position}</p>
                 </div>
                 <div className="JobOffer__datas--details">
                     <p>{JobDatas.postedAt}</p>
