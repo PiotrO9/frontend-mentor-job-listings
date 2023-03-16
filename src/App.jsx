@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import data from '../data.json'
 import './App.scss'
+import JobOffer from './components/JobOffer';
 
 function App() {
-  console.log(data)
+  const [JobOffers, FilterJobOffers] = useState(data);
 
   return (
     <div className="App">
@@ -15,8 +16,8 @@ function App() {
         </div>
         <div className='Listings'>
           {
-          data.map((item, index) => (
-            <p>{item.company}</p>
+          JobOffers.map((item, index) => (
+            <JobOffer key={index} JobDatas={item} />
           ))}
         </div>
       </main>

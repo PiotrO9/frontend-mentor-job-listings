@@ -1,17 +1,17 @@
-@import url("https://fonts.google.com/specimen/League+Spartan");
 #root {
   margin: 0 auto;
   text-align: center;
 }
 
-* {
-  font-family: "League Spartan";
-}
-
 html, body, #root, .App {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.App {
   background-color: hsl(180, 52%, 96%);
+  overflow: scroll;
 }
 
 header {
@@ -32,8 +32,8 @@ main {
   position: relative;
 }
 main .Filters {
-  width: 80%;
-  height: 120px;
+  width: 64%;
+  height: 100px;
   border-radius: 15px;
   position: relative;
   top: -50px;
@@ -41,4 +41,9 @@ main .Filters {
 }
 main .Listings {
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }/*# sourceMappingURL=App.css.map */
