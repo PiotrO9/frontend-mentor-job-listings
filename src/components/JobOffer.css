@@ -7,6 +7,9 @@
   background-color: white;
   border-radius: 15px;
 }
+.JobOffer:nth-of-type(1) {
+  margin-top: 20px;
+}
 .JobOffer:hover::before {
   content: "";
   width: 10px;

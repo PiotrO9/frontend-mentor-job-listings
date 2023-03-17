@@ -8,6 +8,10 @@
     background-color: white;
     border-radius: 15px;
 
+    &:nth-of-type(1) {
+        margin-top: 20px;
+    }
+
     &:hover {
         &::before {
             content: "";

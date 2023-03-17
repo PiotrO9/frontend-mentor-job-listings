@@ -1,8 +1,25 @@
 import './JobOffer.scss';
 import { useState } from 'react';
 
-function JobOffer({JobDatas}) {
+function JobOffer({JobDatas, setLevelsFilter, setRolesFilter, setToolsFilter}) {
     const [logoUrl, SetLogoUrl] = useState(JobDatas.logo.substring(9))
+
+    function SetLevelsFilter(event, filter) {
+        event.preventDefault();
+        setLevelsFilter(filter);
+    }
+
+    function SetRolesFilter(event, filter) {
+        event.preventDefault();
+        setRolesFilter(filter);
+
+    }
+
+    function SetToolsFilter(event, filter) {
+        event.preventDefault();
+        setToolsFilter(filter);
+
+    }
 
     return (
         <div className="JobOffer">
@@ -36,11 +53,13 @@ function JobOffer({JobDatas}) {
                     {
                         JobDatas.tools && (
                             <div className="JobOffer__categories--tools">
-                                <div>{JobDatas.role}</div>
-                                <div>{JobDatas.level}</div>
+                                <div onClick={(event) => SetLevelsFilter(event, JobDatas.role)}>{JobDatas.role}</div>
+                                <div onClick={(event) => SetRolesFilter(event, JobDatas.level)}>{JobDatas.level}</div>
                                 {
                                     JobDatas.tools.map((tool, index) => (
-                                        <div key={index}>{tool}</div>
+                                        <div key={index} onClick={(event) => SetToolsFilter(event, tool)}>
+                                            {tool}
+                                            </div>
                                     ))
                                 }
                             </div>
