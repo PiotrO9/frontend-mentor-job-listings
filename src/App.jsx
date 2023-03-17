@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import data from '../data.json'
 import './App.scss'
 import JobOffer from './components/JobOffer';
@@ -13,24 +13,21 @@ function App() {
   const [RolesFilter, SetRolesFilter] = useState([]);
   const [ToolsFilter, SetToolsFilter] = useState([]);
 
-  const [test, test1] = useState("123");
-
-  function handleLevelsFilter(filter) {
-    SetLevelsFilter([...LevelsFilter, test]);
+  useEffect(() => {
+    console.log(LevelsFilter)
     ApplyFilters()
+  }, [LevelsFilter], [RolesFilter], [ToolsFilter])
+
+  const handleLevelsFilter = (filter) => {
+    SetLevelsFilter(prevFilters => [...prevFilters, filter]);
   } 
 
-  function handleRolesFilter(filter) {
-    let tmpArr = RolesFilter
-    console.log(RolesFilter)
-    SetRolesFilter(tmpArr.push(filter))
-    console.log(RolesFilter)
-    ApplyFilters()
+  const handleRolesFilter = (filter) => {
+    SetRolesFilter(prevFilters => [...prevFilters, filter])
   }
 
-  function handleToolsFilter(filter) {
-    SetToolsFilter(ToolsFilter.push(filter))
-    ApplyFilters()
+  const handleToolsFilter = (filter) => {
+    SetToolsFilter(prevFilters => [...prevFilters, filter])
   }
 
   function ApplyFilters() {

@@ -18,7 +18,6 @@ function JobOffer({JobDatas, setLevelsFilter, setRolesFilter, setToolsFilter}) {
     function SetToolsFilter(event, filter) {
         event.preventDefault();
         setToolsFilter(filter);
-
     }
 
     return (
