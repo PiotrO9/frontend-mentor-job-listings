@@ -54,7 +54,7 @@
   text-transform: uppercase;
   color: white;
   border-radius: 12px;
-  padding: 3px 5px;
+  padding: 4px 5px 1px 5px;
   font-size: 16px;
 }
 .JobOffer__datas--heading div:nth-of-type(1) {
@@ -66,7 +66,7 @@
 .JobOffer__datas--title {
   font-size: 22px;
   max-height: 30px;
-  color: dark;
+  color: black;
 }
 .JobOffer__datas--title p {
   margin: 0;
@@ -88,4 +88,32 @@
 }
 .JobOffer__datas--details p:nth-of-type(1) {
   width: 30%;
+}
+.JobOffer__categories {
+  width: 45%;
+  display: flex;
+  justify-content: end;
+  margin-right: 2rem;
+}
+.JobOffer__categories--tools {
+  width: -moz-max-content;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+.JobOffer__categories--tools div {
+  color: hsl(180, 29%, 50%);
+  background-color: hsl(180, 31%, 95%);
+  font-weight: 700;
+  padding: 3px 6px 4px 6px;
+  border-radius: 7px;
+}
+.JobOffer__categories--tools div:hover {
+  color: white;
+  background-color: hsl(180, 29%, 50%);
+  cursor: pointer;
 }/*# sourceMappingURL=JobOffer.css.map */

@@ -33,7 +33,19 @@ function JobOffer({JobDatas}) {
                 </div>
             </div>
             <div className="JobOffer__categories">
-
+                    {
+                        JobDatas.tools && (
+                            <div className="JobOffer__categories--tools">
+                                <div>{JobDatas.role}</div>
+                                <div>{JobDatas.level}</div>
+                                {
+                                    JobDatas.tools.map((tool, index) => (
+                                        <div key={index}>{tool}</div>
+                                    ))
+                                }
+                            </div>
+                        )
+                    }
             </div>
         </div>
     )

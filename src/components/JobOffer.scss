@@ -61,7 +61,7 @@
                 text-transform: uppercase;
                 color: white;
                 border-radius: 12px;
-                padding: 3px 5px;
+                padding: 4px 5px 1px 5px;
                 font-size: 16px;
 
                 &:nth-of-type(1) {
@@ -77,7 +77,7 @@
         &--title {
             font-size: 22px;
             max-height: 30px;
-            color: dark;
+            color: black;
 
             p {
                 margin: 0;
@@ -101,6 +101,37 @@
 
                 &:nth-of-type(1) {
                     width: 30%;
+                }
+            }
+        }
+    }
+
+    &__categories {
+        width: 45%;
+        display: flex;
+        justify-content: end;
+        margin-right: 2rem;
+
+        &--tools {
+            width: max-content;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            gap: 20px;
+
+            div {
+                color: $DesaturatedDarkCyan;
+                background-color: $LightGrayishCyanFilterTablets;
+                font-weight: 700;
+                padding: 3px 6px 4px 6px;
+                border-radius: 7px;
+
+                &:hover {
+                    color: white;
+                    background-color: $DesaturatedDarkCyan;
+                    cursor: pointer;
                 }
             }
         }
