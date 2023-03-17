@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
 .JobOffer {
   height: 150px;
   width: 80%;
@@ -37,6 +38,7 @@
   justify-content: center;
   font-family: "Gill Sans";
   font-weight: 700;
+  font-family: "League Spartan";
 }
 .JobOffer__datas--heading {
   max-height: 40px;
@@ -64,6 +66,7 @@
 .JobOffer__datas--title {
   font-size: 22px;
   max-height: 30px;
+  color: dark;
 }
 .JobOffer__datas--title p {
   margin: 0;
