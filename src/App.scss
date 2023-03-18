@@ -35,6 +35,9 @@ main {
 
   .Filters {
     display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
     width: 64%;
     height: 100px;
     border-radius: 15px;
