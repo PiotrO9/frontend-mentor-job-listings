@@ -6,7 +6,8 @@ function Filter(props) {
             <div className="Filter__Name">
                 {props.name}
             </div>
-            <div className="Filter__Close">
+            <div className="Filter__Close"
+                onClick={() => props.filterCancel(props.name)}>
                 X
             </div>
         </div>

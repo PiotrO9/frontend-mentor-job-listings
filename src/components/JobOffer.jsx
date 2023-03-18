@@ -52,8 +52,8 @@ function JobOffer({JobDatas, setLevelsFilter, setRolesFilter, setToolsFilter}) {
                     {
                         JobDatas.tools && (
                             <div className="JobOffer__categories--tools">
-                                <div onClick={(event) => SetLevelsFilter(event, JobDatas.role)}>{JobDatas.role}</div>
-                                <div onClick={(event) => SetRolesFilter(event, JobDatas.level)}>{JobDatas.level}</div>
+                                <div onClick={(event) => SetRolesFilter(event, JobDatas.role)}>{JobDatas.role}</div>
+                                <div onClick={(event) => SetLevelsFilter(event, JobDatas.level)}>{JobDatas.level}</div>
                                 {
                                     JobDatas.tools.map((tool, index) => (
                                         <div key={index} onClick={(event) => SetToolsFilter(event, tool)}>
