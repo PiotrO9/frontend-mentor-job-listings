@@ -8,6 +8,12 @@
     background-color: white;
     border-radius: 15px;
 
+    @media (max-width: $MobileResolution) {
+        flex-direction: column;
+        height: 250px;
+        margin-bottom: 1rem;
+    }
+
     &:nth-of-type(1) {
         margin-top: 20px;
     }
@@ -22,6 +28,10 @@
             margin-bottom: auto;
             border-top-left-radius: 15px;
             border-bottom-left-radius: 15px;
+
+            @media (max-width: $MobileResolution) {
+                all:unset;
+            }
         }
 
         .TitleText {
@@ -37,8 +47,23 @@
         align-items: center;
         justify-content: center;
 
+        @media (max-width: $MobileResolution) {
+            position: relative;
+        }
+
         img {
             width: max-content;
+            max-width: 90px;
+
+            @media (max-width: $MobileResolution) {
+                position: absolute;
+                left: 30px;
+                width: 60px;
+            }
+
+            @media (max-width: $MediumResolution) {
+                max-width: 70px;
+            }
         }
     }
 
@@ -51,6 +76,13 @@
         font-weight: 700;
         font-family: 'League Spartan';
 
+        @media (max-width: $MobileResolution) {
+            margin-top: 40px;
+            margin-left: 30px;
+            width: 100%;
+        }
+
+
         &--heading {
             max-height: 40px;
             display: flex;
@@ -61,12 +93,20 @@
             font-size: 18px;
             color: $DesaturatedDarkCyan;
 
+            @media (max-width: $MediumResolution) {
+                font-size: 15px;
+            }
+
             div {
                 text-transform: uppercase;
                 color: white;
                 border-radius: 12px;
                 padding: 4px 5px 1px 5px;
                 font-size: 16px;
+
+                @media (max-width: $MediumResolution) {
+                    font-size: 13px;
+                }
 
                 &:nth-of-type(1) {
                     background-color: $DesaturatedDarkCyan;
@@ -80,8 +120,12 @@
 
         &--title {
             font-size: 22px;
-            max-height: 30px;
+            max-height: 34px;
             color: black;
+
+            @media (max-width: $MediumResolution) {
+                font-size: 18px;
+            }
 
             p {
                 margin: 0;
@@ -91,17 +135,25 @@
         }
 
         &--details {
-            width: 70%;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
             color: $DarkGrayishCyan;
+
+            @media (max-width: $MediumResolution) {
+                justify-content: space-around;
+            }
             
             p {
                 width: 40%;
                 text-align: start;
                 margin-bottom: 5px;
+
+                @media (max-width: $MediumResolution) {
+                    font-size: 14px;
+                }
 
                 &:nth-of-type(1) {
                     width: 30%;
@@ -116,14 +168,25 @@
         justify-content: end;
         margin-right: 2rem;
 
+        @media (max-width: $MobileResolution) {
+            width: 100%;
+            max-width: 230px;
+            justify-content: start;
+            margin-left: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            height: 30%;
+        }
+
         &--tools {
             width: max-content;
             height: 100%;
             display: flex;
             flex-direction: row;
-            justify-content: end;
+            justify-content: center;
             align-items: center;
             gap: 20px;
+            flex-wrap: wrap;
 
             div {
                 color: $DesaturatedDarkCyan;
