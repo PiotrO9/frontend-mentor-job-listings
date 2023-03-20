@@ -73,7 +73,6 @@ function App() {
 
     RolesFilter.forEach(element => {
       if(element == role) {
-        console.log(element + " " + role)
         ifFound = true;
       }
     })

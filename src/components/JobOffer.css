@@ -7,58 +7,104 @@
   background-color: white;
   border-radius: 15px;
 }
+@media (max-width: 800px) {
+  .JobOffer {
+    height: 250px;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+}
 .JobOffer:nth-of-type(1) {
   margin-top: 20px;
 }
 .JobOffer:hover::before {
   content: "";
   width: 10px;
-  background-color: hsl(180, 29%, 50%);
   height: 100%;
   margin-top: auto;
   margin-bottom: auto;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  background-color: hsl(180, 29%, 50%);
+}
+@media (max-width: 800px) {
+  .JobOffer:hover::before {
+    all: unset;
+  }
 }
 .JobOffer:hover .TitleText {
   color: hsl(180, 29%, 50%);
 }
 .JobOffer__image {
-  width: 15%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 15%;
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  .JobOffer__image {
+    position: relative;
+  }
 }
 .JobOffer__image img {
   width: -moz-max-content;
   width: max-content;
+  max-width: 90px;
+}
+@media (max-width: 800px) {
+  .JobOffer__image img {
+    position: absolute;
+    left: 30px;
+    width: 60px;
+  }
+}
+@media (max-width: 1150px) {
+  .JobOffer__image img {
+    max-width: 70px;
+  }
 }
 .JobOffer__datas {
-  display: flex;
   width: 40%;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Gill Sans";
   font-weight: 700;
   font-family: "League Spartan";
+}
+@media (max-width: 800px) {
+  .JobOffer__datas {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 30px;
+  }
 }
 .JobOffer__datas--heading {
   max-height: 40px;
   display: flex;
-  flex-direction: row;
   align-items: center;
+  flex-direction: row;
   gap: 10px;
   text-align: start;
   font-size: 18px;
   color: hsl(180, 29%, 50%);
 }
+@media (max-width: 1150px) {
+  .JobOffer__datas--heading {
+    font-size: 15px;
+  }
+}
 .JobOffer__datas--heading div {
-  text-transform: uppercase;
-  color: white;
-  border-radius: 12px;
   padding: 4px 5px 1px 5px;
+  text-transform: uppercase;
+  border-radius: 12px;
   font-size: 16px;
+  color: white;
+}
+@media (max-width: 1150px) {
+  .JobOffer__datas--heading div {
+    font-size: 13px;
+  }
 }
 .JobOffer__datas--heading div:nth-of-type(1) {
   background-color: hsl(180, 29%, 50%);
@@ -67,9 +113,14 @@
   background-color: hsl(180, 14%, 20%);
 }
 .JobOffer__datas--title {
+  max-height: 34px;
   font-size: 22px;
-  max-height: 30px;
   color: black;
+}
+@media (max-width: 1150px) {
+  .JobOffer__datas--title {
+    font-size: 18px;
+  }
 }
 .JobOffer__datas--title p {
   margin: 0;
@@ -77,17 +128,27 @@
   text-align: start;
 }
 .JobOffer__datas--details {
-  width: 70%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: row;
   color: hsl(180, 8%, 52%);
+}
+@media (max-width: 1150px) {
+  .JobOffer__datas--details {
+    justify-content: space-around;
+  }
 }
 .JobOffer__datas--details p {
   width: 40%;
   text-align: start;
   margin-bottom: 5px;
+}
+@media (max-width: 1150px) {
+  .JobOffer__datas--details p {
+    font-size: 14px;
+  }
 }
 .JobOffer__datas--details p:nth-of-type(1) {
   width: 30%;
@@ -98,22 +159,34 @@
   justify-content: end;
   margin-right: 2rem;
 }
+@media (max-width: 800px) {
+  .JobOffer__categories {
+    width: 100%;
+    height: 30%;
+    max-width: 230px;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+}
 .JobOffer__categories--tools {
   width: -moz-max-content;
   width: max-content;
   height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .JobOffer__categories--tools div {
-  color: hsl(180, 29%, 50%);
-  background-color: hsl(180, 31%, 95%);
-  font-weight: 700;
   padding: 3px 6px 4px 6px;
   border-radius: 7px;
+  font-weight: 700;
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
 }
 .JobOffer__categories--tools div:hover {
   color: white;

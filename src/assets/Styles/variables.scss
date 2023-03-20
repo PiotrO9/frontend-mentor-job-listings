@@ -7,4 +7,25 @@ $VeryDarkGrayishCyan: hsl(180, 14%, 20%);
 $MediumResolution: 1150px;
 $MobileResolution: 800px;
 
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-justify($justify) {
+    @include flex-center;
+    justify-content: $justify;
+}
+
+@mixin width-height-val($value) {
+    width: $value;
+    height: $value;
+}
+
+@mixin width-height($widthVal, $heightVal) {
+    width: $widthVal;
+    height: $heightVal;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");

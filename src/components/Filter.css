@@ -1,9 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
 .Filter {
-  height: -moz-max-content;
-  height: max-content;
   width: -moz-max-content;
   width: max-content;
-  color: hsl(180, 29%, 50%);
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-family: "League Spartan";
   background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+}
+.Filter:nth-of-type(1) {
+  margin-left: 2rem;
+}
+.Filter__Name {
+  padding: 6px;
+  font-weight: 700;
+}
+.Filter__Close {
+  height: 300%;
+  width: 100%;
+  padding: 6px 8px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+}
+.Filter__Close:hover {
+  padding-top: 6px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }/*# sourceMappingURL=Filter.css.map */
